@@ -1,6 +1,7 @@
 // File: pages/index.tsx
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Header from './components/Header';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
@@ -26,7 +27,13 @@ const Home: NextPage = () => {
             </Link>
           </div>
           <div className={styles.heroImage}>
-            <img src="/hero.jpg" alt="Barista pouring latte art" />
+            <Image 
+              src="/hero.jpg" 
+              alt="Barista pouring latte art" 
+              width={600}
+              height={400}
+              layout="responsive"
+            />
           </div>
         </section>
 
@@ -48,23 +55,41 @@ const Home: NextPage = () => {
         <section className={styles.gallerySection}>
           <h2>THE EXPERIENCE</h2>
           <div className={styles.galleryText}>
-            <p>Step into a space where every detail has been considered. From the warmth of our interior to the personal touch of our service, we've crafted an environment that invites you to slow down and savor the moment.</p>
+            <p>Step into a space where every detail has been considered. From the warmth of our interior to the personal touch of our service, we&apos;ve crafted an environment that invites you to slow down and savor the moment.</p>
           </div>
           <div className={styles.gallery}>
             <div className={styles.galleryItem}>
-              <img src="/gallery1.jpg" alt="Noble Cafe interior" />
+              <Image 
+                src="/gallery1.jpg" 
+                alt="Noble Cafe interior" 
+                width={400}
+                height={350}
+                layout="responsive"
+              />
               <div className={styles.galleryCaption}>
                 <p>A space designed for connection</p>
               </div>
             </div>
             <div className={styles.galleryItem}>
-              <img src="/gallery2.jpg" alt="Coffee preparation" />
+              <Image 
+                src="/gallery2.jpg" 
+                alt="Coffee preparation" 
+                width={400}
+                height={350}
+                layout="responsive"
+              />
               <div className={styles.galleryCaption}>
                 <p>Artistry in every cup</p>
               </div>
             </div>
             <div className={styles.galleryItem}>
-              <img src="/gallery3.jpg" alt="Community events" />
+              <Image 
+                src="/gallery3.jpg" 
+                alt="Community events" 
+                width={400}
+                height={350}
+                layout="responsive"
+              />
               <div className={styles.galleryCaption}>
                 <p>Where community thrives</p>
               </div>

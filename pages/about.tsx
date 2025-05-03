@@ -1,6 +1,7 @@
 // File: pages/about.tsx
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Header from './components/Header';
 import styles from '../styles/About.module.css';
 
@@ -23,12 +24,18 @@ const About: NextPage = () => {
 
         <section className={styles.aboutContent}>
           <div className={styles.storyImage}>
-            <img src="/founder.jpg" alt="Noble Cafe owners" />
+            <Image 
+              src="/founder.jpg" 
+              alt="Noble Cafe owners" 
+              width={500}
+              height={500}
+              layout="responsive"
+            />
           </div>
           <div className={styles.storyText}>
             <h2>Women-Owned, Passion-Driven</h2>
             <p>
-              Noble Cafe & Bakery was born from a deep love for the art of coffee and a desire to create a space where people could slow down and connect. Founded in 2021 by sisters Emma and Sarah Mitchell, our cafe stands as a testament to the belief that coffee is more than just a beverage—it's an expression of art, culture, and community.
+              Noble Cafe & Bakery was born from a deep love for the art of coffee and a desire to create a space where people could slow down and connect. Founded in 2021 by sisters Emma and Sarah Mitchell, our cafe stands as a testament to the belief that coffee is more than just a beverage&mdash;it&apos;s an expression of art, culture, and community.
             </p>
             <p>
               As a proudly women-owned business, we bring a unique perspective to the coffee industry, emphasizing inclusivity, sustainability, and creativity in everything we do. Our journey began after years of experience in specialty coffee shops across the country, where we honed our craft and developed our vision for a cafe that would honor the artistry behind every cup.
@@ -40,13 +47,13 @@ const About: NextPage = () => {
           <div className={styles.missionContent}>
             <h2>Our Philosophy</h2>
             <p>
-              At Noble Cafe & Bakery, we believe in the transformative power of a thoughtfully crafted cup of coffee. We see coffee as a canvas—a medium through which we express our commitment to quality, sustainability, and community.
+              At Noble Cafe & Bakery, we believe in the transformative power of a thoughtfully crafted cup of coffee. We see coffee as a canvas&mdash;a medium through which we express our commitment to quality, sustainability, and community.
             </p>
             <p>
-              Each cup we serve represents a journey—from the farmers who cultivate the beans with care, to our roasters who bring out their unique characteristics, to our baristas who transform them into works of art. We honor this journey by approaching our craft with reverence, precision, and creativity.
+              Each cup we serve represents a journey&mdash;from the farmers who cultivate the beans with care, to our roasters who bring out their unique characteristics, to our baristas who transform them into works of art. We honor this journey by approaching our craft with reverence, precision, and creativity.
             </p>
             <p>
-              Beyond coffee, we're committed to creating a space that nurtures connection. Our cafe is designed as a sanctuary from the rush of everyday life—a place where conversations flow, ideas spark, and community thrives.
+              Beyond coffee, we&apos;re committed to creating a space that nurtures connection. Our cafe is designed as a sanctuary from the rush of everyday life&mdash;a place where conversations flow, ideas spark, and community thrives.
             </p>
           </div>
           <div className={styles.valuesGrid}>
@@ -74,10 +81,10 @@ const About: NextPage = () => {
           <div className={styles.processContent}>
             <div className={styles.processText}>
               <p>
-                Coffee is our medium, and the cafe is our gallery. We approach each aspect of our business with an artist's eye—from the carefully curated interiors to the precise pour of espresso, to the delicate swirl of latte art.
+                Coffee is our medium, and the cafe is our gallery. We approach each aspect of our business with an artist&apos;s eye&mdash;from the carefully curated interiors to the precise pour of espresso, to the delicate swirl of latte art.
               </p>
               <p>
-                Our baristas are trained not just in the technical aspects of coffee preparation, but in understanding coffee as a form of expression. They study the nuances of flavor, the science of extraction, and the artistry of presentation. Every cup they create tells a story—of origin, process, and passion.
+                Our baristas are trained not just in the technical aspects of coffee preparation, but in understanding coffee as a form of expression. They study the nuances of flavor, the science of extraction, and the artistry of presentation. Every cup they create tells a story&mdash;of origin, process, and passion.
               </p>
               <p>
                 We extend this artistry to our bakery items as well. Our pastries and bread are crafted in-house using traditional methods and the finest ingredients, creating perfect companions to our coffee offerings.
@@ -112,17 +119,29 @@ const About: NextPage = () => {
           <div className={styles.founderProfiles}>
             <div className={styles.founderProfile}>
               <div className={styles.founderImage}>
-                <img src="/founder1.jpg" alt="Chris Henry" />
+                <Image
+                  src="/gallery2.jpg"
+                  alt="Chris Henry"
+                  width={250}
+                  height={250}
+                  layout="responsive"
+                />
               </div>
               <h3>Chris Henry</h3>
               <p>Web Designer</p>
               <p>
-                 Founder info would go here :
+                Founder info would go here :
               </p>
             </div>
             <div className={styles.founderProfile}>
               <div className={styles.founderImage}>
-                <img src="/founder2.jpg" alt="chris henry" />
+                <Image
+                  src="/gallery1.jpg"
+                  alt="Chris Henry"
+                  width={250}
+                  height={250}
+                  layout="responsive"
+                />
               </div>
               <h3>Chris Henry</h3>
               <p>Web Designer</p>
