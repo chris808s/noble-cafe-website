@@ -1,0 +1,269 @@
+.container {
+    min-height: 100vh;
+    background-color: #f5f1ea;
+    color: #2d2d2d;
+  }
+  
+  .main {
+    padding: 0 4rem 4rem;
+  }
+  
+  .menuHero {
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+  }
+  
+  .menuHero h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .menuHero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .menuSection {
+    margin-bottom: 4rem;
+  }
+  
+  .menuSection h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    position: relative;
+  }
+  
+  .menuSection h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #d4a373;
+    margin: 1rem auto 0;
+  }
+  
+  .menuGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .menuItem {
+    background-color: #e9e2d7;
+    padding: 2rem;
+    border-radius: 4px;
+  }
+  
+  .menuItemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+  }
+  
+  .menuItem h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .price {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .menuItem p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #4a4a4a;
+  }
+  
+  .optionsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .optionItem {
+    background-color: #e9e2d7;
+    padding: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .optionItem h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0 0 0.5rem;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .optionItem p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #4a4a4a;
+  }
+  
+  .specialsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .specialItem {
+    background-color: #e9e2d7;
+    padding: 2rem;
+    border-radius: 4px;
+    border-left: 4px solid #d4a373;
+  }
+  
+  .specialHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+  }
+  
+  .specialItem h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .specialItem p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #4a4a4a;
+  }
+  
+  .menuFooter {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: #e9e2d7;
+    border-radius: 4px;
+  }
+  
+  .menuFooter p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #4a4a4a;
+  }
+  
+  .footer {
+    background-color: #e9e2d7;
+    padding: 4rem;
+  }
+  
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  
+  .footerLogo h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .footerNav {
+    display: flex;
+    gap: 4rem;
+  }
+  
+  .footerColumn h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .footerColumn p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 2rem;
+    border-top: 1px solid #d4d0c7;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1024px) {
+    .main {
+      padding: 0 2rem 2rem;
+    }
+    
+    .menuHero h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .main {
+      padding: 0 1.5rem 1.5rem;
+    }
+    
+    .menuHero {
+      padding: 3rem 0;
+    }
+    
+    .menuHero h1 {
+      font-size: 2rem;
+    }
+    
+    .menuGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .optionsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footerContent {
+      flex-direction: column;
+    }
+    
+    .footerLogo {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .footerNav {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .footer {
+      padding: 2rem 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menuHero h1 {
+      font-size: 1.8rem;
+    }
+    
+    .menuSection h2 {
+      font-size: 1.5rem;
+    }
+    
+    .optionsGrid {
+      grid-template-columns: 1fr;
+    }
+  }

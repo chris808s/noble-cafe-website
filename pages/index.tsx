@@ -1,115 +1,107 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+// File: pages/index.tsx
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Header from './components/Header';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export default function Home() {
+const Home: NextPage = () => {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+    <div className={styles.container}>
+      <Head>
+        <title>Noble Cafe | Modern Art-Inspired Coffee Experience</title>
+        <meta name="description" content="Experience the blend of art and coffee at Noble Cafe" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Header />
+
+      <main className={styles.main}>
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <h1>CRAFTING EXCEPTIONAL<br />COFFEE EXPERIENCES</h1>
+            <p>Where art meets taste in the heart of the city.</p>
+            <Link href="/menu">
+              <button className={styles.primaryButton}>DISCOVER OUR COFFEE</button>
+            </Link>
+          </div>
+          <div className={styles.heroImage}>
+            <img src="/hero.jpg" alt="Barista pouring latte art" />
+          </div>
+        </section>
+
+        <section className={styles.featureGrid}>
+          <div className={styles.featureCard}>
+            <h3>Our Story</h3>
+            <p>Founded on the principles of quality, artistry, and community.</p>
+          </div>
+          <div className={styles.featureCard}>
+            <h3>The Space</h3>
+            <p>A minimal, intentional environment designed for connection.</p>
+          </div>
+          <div className={styles.featureCard}>
+            <h3>The Coffee</h3>
+            <p>Ethically sourced, meticulously roasted, expertly prepared.</p>
+          </div>
+        </section>
+
+        <section className={styles.gallerySection}>
+          <h2>THE EXPERIENCE</h2>
+          <div className={styles.galleryText}>
+            <p>Step into a space where every detail has been considered. From the warmth of our interior to the personal touch of our service, we've crafted an environment that invites you to slow down and savor the moment.</p>
+          </div>
+          <div className={styles.gallery}>
+            <div className={styles.galleryItem}>
+              <img src="/gallery1.jpg" alt="Noble Cafe interior" />
+              <div className={styles.galleryCaption}>
+                <p>A space designed for connection</p>
+              </div>
+            </div>
+            <div className={styles.galleryItem}>
+              <img src="/gallery2.jpg" alt="Coffee preparation" />
+              <div className={styles.galleryCaption}>
+                <p>Artistry in every cup</p>
+              </div>
+            </div>
+            <div className={styles.galleryItem}>
+              <img src="/gallery3.jpg" alt="Community events" />
+              <div className={styles.galleryCaption}>
+                <p>Where community thrives</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <div className={styles.footerLogo}>
+            <h2>Noble Cafe & Bakery</h2>
+          </div>
+          <div className={styles.footerNav}>
+            <div className={styles.footerColumn}>
+              <h3>Visit</h3>
+              <p>918 Chestnut Ridge Rd</p>
+              <p>Morgantown, WV 26505</p>
+              <p>Mon-Sat: 7am-7pm</p>
+              <p>Sun: 7am-5pm</p>
+            </div>
+            <div className={styles.footerColumn}>
+              <h3>Connect</h3>
+              <p>hello@noblecafe.com</p>
+              <p>(304) 228-1404</p>
+              <div className={styles.socialIcons}>
+                {/* Social media icons will be added here */}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.copyright}>
+          <p>&copy; {new Date().getFullYear()} Noble Cafe & Bakery. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
-}
+};
+
+export default Home;
